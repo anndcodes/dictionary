@@ -1,9 +1,10 @@
 import { useState } from "react";
-
+import axios from "axios";
 
 function SearchWord() {
   
-  const [word, setWord] = useState(null)
+  const [word, setWord] = useState(null);
+  const [result, setResult] = useState(null);
 
 
   function handleSearch(event) {
@@ -12,6 +13,14 @@ function SearchWord() {
 
   function handleWord(event) {
     setWord(event.target.value);
+  }
+
+  function search() {
+    const dictionaryApiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+    
+    axios.get(dictionaryApiUrl).then(response => {
+      setResult(response.data[0]);
+    })
   }
   
   return (
