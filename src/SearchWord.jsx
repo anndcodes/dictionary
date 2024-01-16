@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import Word from "./Word.jsx"
 
 function SearchWord(props) {
   
@@ -35,6 +36,10 @@ function SearchWord(props) {
             <input type="search" placeholder="search for a word" onChange={handleWord}/>
           </form>
           <small>ie: code, coffee, computer</small>
+        </div>
+
+        <div className="dictionary">
+          <Word result={result} />
         </div>
       </>
     );
