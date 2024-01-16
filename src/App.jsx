@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <SearchWord />
+      <SearchWord defaultWord="hello"/>
     </>
   )
 }
