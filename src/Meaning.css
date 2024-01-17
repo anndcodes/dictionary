@@ -1,0 +1,21 @@
+.definition-title,
+.definition {
+  margin: 0;
+}
+
+.definition-title {
+  font-size: 2.4rem;
+  color: var(--primary-color);
+  padding-bottom: 2rem;
+}
+
+.definition {
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.definition-box {
+  border-bottom: 1px solid var(--primary-color);
+  margin-bottom: 2rem;
+}
