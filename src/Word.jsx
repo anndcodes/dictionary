@@ -1,4 +1,5 @@
 import Meaning from "./Meaning.jsx";
+import "./Word.css"
 
 function Word(props) {
   return (

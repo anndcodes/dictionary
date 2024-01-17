@@ -1,0 +1,20 @@
+.word-phonetic {
+  max-width: 60%;
+  margin: 7.6rem auto 0;
+  padding: 5rem 0 5rem 4rem;
+  background: var(--primary-color);
+  border-radius: 11px;
+  text-align: left;
+}
+
+.word {
+  margin: 0;
+  padding-bottom: 2rem;
+  font-size: 3.6rem;
+}
+
+.phonetic {
+  margin: 0;
+  font-size: 1.8rem;
+  opacity: 60%;
+}
