@@ -1,0 +1,14 @@
+.images {
+  max-width: 50%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  gap: 3rem;
+  padding-inline: 4rem;
+}
+
+img {
+  border-radius: 11px;
+}

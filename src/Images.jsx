@@ -1,3 +1,5 @@
+import "./Images.css";
+
 function Images(props) {
   return (
     <div className="images">
