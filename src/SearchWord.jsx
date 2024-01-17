@@ -1,12 +1,15 @@
 import { useState } from "react";
 import axios from "axios";
 import Word from "./Word.jsx";
-import "./SearchWord.css"
+import "./SearchWord.css";
+import { createClient } from "pexels";
+import Images from "./Images.jsx";
 
 function SearchWord(props) {
   const [word, setWord] = useState(props.defaultWord);
   const [result, setResult] = useState(null);
   const [load, setLoad] = useState(false);
+  const [photo, setPhoto] = useState(null);
 
   function handleSearch(event) {
     event.preventDefault();
@@ -24,6 +27,19 @@ function SearchWord(props) {
       setResult(response.data[0]);
       setLoad(true);
     });
+
+    const pexelsApi = `https://api.pexels.com/v1/search/?query=${word}&per_page=9`;
+
+    axios
+      .get(pexelsApi, {
+        headers: {
+          Authorization:
+            "QYrgFgpCJvuOiXWAPEsEy3OxVtHXRV9swH9ahJuJJvpkZH9UpmGYISS6",
+        },
+      })
+      .then((response) => {
+        setPhoto(response.data.photos);
+      });
   }
 
   if (load) {
@@ -43,6 +59,7 @@ function SearchWord(props) {
 
         <main className="dictionary">
           <Word result={result} />
+          <Images image={photo} />
         </main>
       </>
     );
