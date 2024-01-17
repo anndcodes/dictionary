@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import Word from "./Word.jsx";
+import "./SearchWord.css"
 
 function SearchWord(props) {
   const [word, setWord] = useState(props.defaultWord);
@@ -29,7 +30,7 @@ function SearchWord(props) {
     return (
       <>
         <header className="SearchWord">
-          <h1>What word would you like to search?</h1>
+          <h1 className="title">What word would you like to search?</h1>
           <form onSubmit={handleSearch}>
             <input
               type="search"
@@ -37,7 +38,7 @@ function SearchWord(props) {
               onChange={handleWord}
             />
           </form>
-          <small>ie: code, coffee, computer</small>
+          <span>ie: code, coffee, computer</span>
         </header>
 
         <main className="dictionary">
@@ -47,7 +48,7 @@ function SearchWord(props) {
     );
   } else {
     search();
-    return "Searching";
+    return <p>Searching</p>;
   }
 }
 
