@@ -2,7 +2,7 @@ import Meaning from "./Meaning.jsx";
 
 function Word(props) {
   return (
-    <main>
+    <>
       <section className="word-phonetic">
         <h2 className="word">{props.result.word}</h2>
         <h3 className="phonetic">
@@ -19,7 +19,7 @@ function Word(props) {
           );
         })}
       </section>
-    </main>
+    </>
   );
 }
 

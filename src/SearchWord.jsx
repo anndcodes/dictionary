@@ -1,13 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
-import Word from "./Word.jsx"
+import Word from "./Word.jsx";
 
 function SearchWord(props) {
-  
   const [word, setWord] = useState(props.defaultWord);
   const [result, setResult] = useState(null);
   const [load, setLoad] = useState(false);
-
 
   function handleSearch(event) {
     event.preventDefault();
@@ -20,27 +18,31 @@ function SearchWord(props) {
 
   function search() {
     const dictionaryApiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-    
-    axios.get(dictionaryApiUrl).then(response => {
+
+    axios.get(dictionaryApiUrl).then((response) => {
       setResult(response.data[0]);
       setLoad(true);
-    })
+    });
   }
-  
-  if(load) {
+
+  if (load) {
     return (
       <>
-        <div className="SearchWord">
+        <header className="SearchWord">
           <h1>What word would you like to search?</h1>
           <form onSubmit={handleSearch}>
-            <input type="search" placeholder="search for a word" onChange={handleWord}/>
+            <input
+              type="search"
+              placeholder="search for a word"
+              onChange={handleWord}
+            />
           </form>
           <small>ie: code, coffee, computer</small>
-        </div>
+        </header>
 
-        <div className="dictionary">
+        <main className="dictionary">
           <Word result={result} />
-        </div>
+        </main>
       </>
     );
   } else {
