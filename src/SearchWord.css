@@ -32,6 +32,29 @@ span {
   margin-top: 1rem;
 }
 
+.error {
+  background: var(--primary-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-msg {
+  font-size: 3.5rem;
+}
+
+.error-link {
+  font-size: 2rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.error-link:hover {
+  color: var(--tertiary-color);
+}
+
 /* mobile version */
 @media screen and (max-width: 767px) {
   .title {
@@ -50,6 +73,15 @@ span {
   span {
     max-width: 60%;
     font-size: 1.3rem;
+  }
+
+  .error-msg {
+    max-width: 70%;
+    font-size: 2rem;
+  }
+
+  .error-link {
+    font-size: 1.6rem;
   }
 }
 
