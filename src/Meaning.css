@@ -19,3 +19,18 @@
   border-bottom: 1px solid var(--primary-color);
   margin-bottom: 2rem;
 }
+
+/* mobile version */
+@media (min-width: 280px) and (max-width: 321px) {
+  .definition-box {
+    width: 100%;
+  }
+
+  .definition-title {
+    font-size: 2rem;
+  }
+
+  .definition {
+    font-size: 1.5rem;
+  }
+}

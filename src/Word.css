@@ -27,3 +27,24 @@
   margin: 5.5rem auto;
   border: 2px solid var(--primary-color);
 }
+
+/* mobile version */ 
+@media screen and (max-width: 767px) {
+  .word {
+    font-size: 3rem;
+  }
+
+  .phonetic {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 321px) {
+  .word {
+    font-size: 2.5rem;
+  }
+
+  .phonetic {
+    font-size: 1.5rem;
+  }
+}

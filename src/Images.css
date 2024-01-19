@@ -12,3 +12,16 @@
 img {
   border-radius: 11px;
 }
+
+/* mobile version */
+@media screen and (max-width: 767px) {
+  .images {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 321px) {
+  .images {
+    padding-inline: 0;
+  }
+}

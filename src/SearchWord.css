@@ -1,6 +1,6 @@
 header {
   background: var(--primary-color);
-  padding-block: 11.5rem 15rem;
+  padding-block: 15rem;
 }
 
 .title {
@@ -30,4 +30,31 @@ span {
   margin: 0 auto;
   text-align: left;
   margin-top: 1rem;
+}
+
+/* mobile version */
+@media screen and (max-width: 767px) {
+  .title {
+    max-width: 70%;
+    margin: 0 auto;
+    font-size: 2.7rem;
+  }
+
+  input {
+    width: 60%;
+    padding-left: 0.5rem;
+    margin-top: 5rem;
+    font-size: 1.5rem;
+  }
+
+  span {
+    max-width: 60%;
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 321px) {
+  header {
+    width: 100%;
+  }
 }
