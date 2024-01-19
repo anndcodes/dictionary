@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import Word from "./Word.jsx";
 import "./SearchWord.css";
@@ -10,6 +10,11 @@ function SearchWord(props) {
   const [result, setResult] = useState(null);
   const [load, setLoad] = useState(false);
   const [photo, setPhoto] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    search();
+  }, []);
 
   function handleSearch(event) {
     event.preventDefault();
@@ -23,10 +28,18 @@ function SearchWord(props) {
   function search() {
     const dictionaryApiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
 
-    axios.get(dictionaryApiUrl).then((response) => {
-      setResult(response.data[0]);
-      setLoad(true);
-    });
+    axios
+      .get(dictionaryApiUrl)
+      .then((response) => {
+        setResult(response.data[0]);
+        setLoad(true);
+        console.log(response.data[0]);
+      })
+      .catch((error) => {
+        if (error.response.data) {
+          setError(error.response.data);
+        }
+      });
 
     const pexelsApi = `https://api.pexels.com/v1/search/?query=${word}&per_page=9`;
 
@@ -43,28 +56,36 @@ function SearchWord(props) {
   }
 
   if (load) {
-    return (
-      <>
-        <header className="SearchWord">
-          <h1 className="title">What word would you like to search?</h1>
-          <form onSubmit={handleSearch}>
-            <input
-              type="search"
-              placeholder="search for a word"
-              onChange={handleWord}
-            />
-          </form>
-          <span>ie: code, coffee, computer</span>
-        </header>
+    if (error) {
+      return (
+        <>
+          <p>{error.message}</p>
+          <a href="../index.html">Back to home</a>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <header className="SearchWord">
+            <h1 className="title">What word would you like to search?</h1>
+            <form onSubmit={handleSearch}>
+              <input
+                type="search"
+                placeholder="search for a word"
+                onChange={handleWord}
+              />
+            </form>
+            <span>ie: code, coffee, computer</span>
+          </header>
 
-        <main className="dictionary">
-          <Word result={result} />
-          <Images image={photo} />
-        </main>
-      </>
-    );
+          <main className="dictionary">
+            <Word result={result} />
+            <Images image={photo} />
+          </main>
+        </>
+      );
+    }
   } else {
-    search();
     return <p>Searching</p>;
   }
 }
