@@ -55,6 +55,34 @@ span {
   color: var(--tertiary-color);
 }
 
+/* darkmode */
+.dark header {
+  background: var(--secondary-color);
+  border: none;
+}
+
+.dark header input {
+  border-color: var(--primary-color);
+  color: inherit;
+}
+
+.dark header .title {
+  color: var(--primary-color-darkmode);
+}
+
+.dark .error {
+  background: var(--secondary-color);
+}
+
+.dark .error-msg,
+.error-link {
+  color: var(--primary-color-darkmode);
+}
+
+.dark .error-link:hover {
+  color: var(--tertiary-color);
+}
+
 /* mobile version */
 @media screen and (max-width: 767px) {
   .title {

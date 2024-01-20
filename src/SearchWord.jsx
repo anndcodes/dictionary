@@ -65,7 +65,7 @@ function SearchWord(props) {
       );
     } else {
       return (
-        <>
+        <div>
           <header className="SearchWord">
             <h1 className="title">What word would you like to search?</h1>
             <form onSubmit={handleSearch}>
@@ -82,7 +82,7 @@ function SearchWord(props) {
             <Word result={result} />
             <Images image={photo} />
           </main>
-        </>
+        </div>
       );
     }
   } else {

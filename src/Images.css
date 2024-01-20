@@ -13,6 +13,11 @@ img {
   border-radius: 11px;
 }
 
+/* darkmode */
+.dark-img {
+  filter: brightness(.7) contrast(1.2);
+}
+
 /* mobile version */
 @media screen and (max-width: 767px) {
   .images {

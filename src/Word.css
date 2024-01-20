@@ -28,6 +28,21 @@
   border: 2px solid var(--primary-color);
 }
 
+/* dark mode */
+.dark main > .word-phonetic {
+  background: var(--primary-color-darkmode);
+  color: var(--secondary-color);
+}
+
+.dark main .meanings {
+  border-color: var(--primary-color-darkmode);
+}
+
+.dark main .definition-title {
+  color: var(--primary-color-darkmode);
+}
+
+
 /* mobile version */ 
 @media screen and (max-width: 767px) {
   .word {
