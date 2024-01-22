@@ -85,7 +85,7 @@ span {
 }
 
 .dark .error-msg,
-.error-link {
+.dark .error-link {
   color: var(--primary-color-darkmode);
 }
 
