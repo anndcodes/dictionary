@@ -31,7 +31,7 @@ function App() {
         style={{ marginBottom: "2rem" }}
         checked={isDarkMode}
         onChange={setIsDarkMode}
-        size={40}
+        size={35}
         moonColor={"#d5eb05"}
         sunColor={"#111f22"}
       />

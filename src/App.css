@@ -18,7 +18,7 @@ body {
 
 #root {
   box-sizing: border-box;
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   font-family: "Inter", sans-serif;

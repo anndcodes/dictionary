@@ -1,6 +1,6 @@
 header {
   background: var(--primary-color);
-  padding-block: 15rem;
+  padding-block: 9rem 12rem;
 }
 
 .title {
@@ -99,10 +99,14 @@ span {
 
 /* mobile version */
 @media screen and (max-width: 767px) {
+  header {
+    padding-top: 12rem;
+  }
+
   .title {
     max-width: 70%;
     margin: 0 auto;
-    font-size: 2.7rem;
+    font-size: 2.5rem;
   }
 
   input {
