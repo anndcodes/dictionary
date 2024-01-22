@@ -35,6 +35,11 @@ function App() {
         moonColor={"#d5eb05"}
         sunColor={"#111f22"}
       />
+
+      <footer>
+        This project was coded by <b>Annd</b> and it's on{" "}
+        <a href="https://github.com/anndcodes/dictionary" target="_blank">Github</a>
+      </footer>
     </>
   );
 }
