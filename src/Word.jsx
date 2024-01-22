@@ -23,6 +23,24 @@ function Word(props) {
         </section>
       </>
     );
+  } else if (props.result.phonetics.length === 0) {
+    return (
+      <>
+        <section className="word-phonetic">
+          <h2 className="word">{props.result.word}</h2>
+        </section>
+
+        <section className="meanings">
+          {props.result.meanings.map(function (meaning, index) {
+            return (
+              <div key={index}>
+                <Meaning meaning={meaning} />
+              </div>
+            );
+          })}
+        </section>
+      </>
+    );
   } else {
     return (
       <>
