@@ -55,6 +55,16 @@ span {
   color: var(--tertiary-color);
 }
 
+.searching {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+  font-size: 1.9rem;
+}
+
 /* darkmode */
 .dark header {
   background: var(--secondary-color);
@@ -81,6 +91,10 @@ span {
 
 .dark .error-link:hover {
   color: var(--tertiary-color);
+}
+
+.dark .searching {
+  background: var(--secondary-color);
 }
 
 /* mobile version */
@@ -110,6 +124,10 @@ span {
 
   .error-link {
     font-size: 1.6rem;
+  }
+
+  .searching {
+    font-size: 1.5rem;
   }
 }
 

@@ -86,7 +86,7 @@ function SearchWord(props) {
       );
     }
   } else {
-    return <p>Searching</p>;
+    return <p className="searching">Searching...</p>;
   }
 }
 
