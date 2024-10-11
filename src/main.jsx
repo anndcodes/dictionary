@@ -4,9 +4,9 @@ import App from "./App.jsx";
 // import BrowserRouter from 'react-router-dom/BrowserRouter'
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <App />
-  </React.StrictMode>
+  // </React.StrictMode>
   //  <BrowserRouter basename={process.env.PUBLIC_URL}>
   //    <App />
   //  </BrowserRouter>

@@ -60,7 +60,9 @@ function SearchWord(props) {
       return (
         <div className="error">
           <p className="error-msg">{error.message}</p>
-          <a href="../index.html" className="error-link">Back to home</a>
+          <a href="../index.html" className="error-link">
+            Back to home
+          </a>
         </div>
       );
     } else {

@@ -1,6 +1,7 @@
 import "./Images.css";
 
 function Images(props) {
+      // console.log(props);
   return (
     <div className="images">
       {props.image.map(function (image, index) {
